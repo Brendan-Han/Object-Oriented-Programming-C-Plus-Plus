@@ -6,38 +6,37 @@ using namespace std;
  * 
  * @param size - the number of elements in the array
  */
-void printMemVec(vector<int> vec, int size) {
-    printf("Vector - Each int is worth %lu bytes\n", vec.size());
-    for(int i = 0; i < size; i++) {
-        printf("Value :%i at Memory Location: %p\n", vec[i], vec[i] + i);
+void printMemVec(vector<int> &vec, int size) {
+    for(int i = 0; i < vec.size(); i++) {
+        printf("Value :%i at Memory Location: %p\n", vec[i], &vec[i]);
     }
 
 }
 
-void incVecBy10(vector<int> vec, int size) {
+void incVecBy10(vector<int> &vec, int size) {
     for(int i = 0; i < size; i++) {
         vec[i] += 10; 
     }
 }
 
 int main() {
-    const int SIZE = 5;
-    vector<int> vec(SIZE);
-    for(int i = 0; i < SIZE; i++) {
+    const int size = 5;
+    vector<int> vec(size);
+    for(int i = 0; i < size; i++) {
         vec[i] = 100 + i;
     }
 printf("Before Increment------------\n");
-printMemVec(vec, SIZE);
-incVecBy10(vec, SIZE);
+printMemVec(vec, size);
+incVecBy10(vec,size);
 printf("After Increment------------\n");
-printMemVec(vec, SIZE);
+printMemVec(vec,size);
 vec.pop_back();
 printf("After Pop------------\n");
-printMemVec(vec, SIZE);
+printMemVec(vec,size);
 vec.push_back(101);
 vec.push_back(102);
 printf("After Push------------\n");
-printMemVec(vec, SIZE);
+printMemVec(vec,size);
 
 return 0;
 }
