@@ -1,8 +1,6 @@
 #include <iostream>
 #include <iomanip>
-
 #include<string>
-#define PET_H
 #include "pet.h"
 using namespace std;
 
@@ -11,9 +9,9 @@ class pet {
     pet (string name, int age, string owner, bool isHouseTrained);
 
     pet::pet() { 
-        name = "unnamed";
+        name = "";
         age = -1;
-        owner = "no one";
+        owner = "";
         isHouseTrained = false;
     }   
     //accessor functions
