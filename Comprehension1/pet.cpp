@@ -13,14 +13,21 @@ class pet {
         age = -1;
         owner = "";
         isHouseTrained = false;
-    }   
-    
-    void getName(string name);
-    void getAge(int age);
-    void getOwner(string owner);
-    void getIsHouseTrained(bool isHouseTrained);
+    }  
 
-    //mutator functions
+    string getName() const{
+        return name;
+    };
+    int getAge() const{
+        return age;
+    }
+    string getOwner() const{
+        return owner;
+    }
+    bool getIsHouseTrained() const{
+        return isHouseTrained;
+    }
+
     void pet::updateName (string name) {
         this->name = name;
     }
