@@ -1,14 +1,13 @@
 #include <iostream>
-#include<string>
 #include "pet.h"
 using namespace std;
 
-class pet {
-    
-    public:
-
-    pet ();
-    pet (string name, int age, string owner, bool isHouseTrained);
+    pet::pet(string name, int age, string owner, bool isHouseTrained){
+        this->name = name;
+        this->age = age;
+        this->owner = owner;
+        this->isHouseTrained = isHouseTrained;
+    }
 
     pet::pet() { 
         name = "";
@@ -17,35 +16,28 @@ class pet {
         isHouseTrained = false;
     }  
 
-    string getName() const{
+    string pet::getName() const {
         return name;
     };
-    int getAge() const{
+    int pet::getAge() const {
         return age;
     }
-    string getOwner() const{
+    string pet::getOwner() const {
         return owner;
     }
-    bool getIsHouseTrained() const{
+    bool pet::getIsHouseTrained() const {
         return isHouseTrained;
     }
 
-    void pet::updateName (string name) {
-        this->name = name;
+    void pet::updateName (string new_name) {
+        name = new_name;
     }
-    void pet::updateAge (int age) {
-        this->age;
+    void pet::updateAge () {
+        age = age++;
     }
-    void pet::updateOwner (string owner) {
-        this->owner = owner;
+    void pet::updateOwner (string new_owner) {
+        owner = new_owner;
     }
     void pet::updateIsHouseTrained (bool isHouseTrained) {
-        this->isHouseTrained = isHouseTrained;
+        isHouseTrained = true;
     } 
-
-private:
-    string name;
-    int age;
-    string owner;
-    bool isHouseTrained;    
-};

@@ -6,5 +6,7 @@ using namespace std;
 
 int main(){
     pet petd;
-    pet petn;
+    pet petov("Shiro", 2, "Bryan", false);
+
+    
 }

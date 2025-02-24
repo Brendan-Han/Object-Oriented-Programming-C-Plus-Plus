@@ -6,13 +6,16 @@
 using namespace std;
 
 class pet {
+
+public:
+
     pet ();
     pet (string name, int age, string owner, bool isHouseTrained);
 
     //mutator functions
-    void updateName (string name);
-    void updateAge (int age);
-    void updateOwner (string owner);
+    void updateName (string new_name);
+    void updateAge ();
+    void updateOwner (string new_owner);
     void updateIsHouseTrained (bool isHouseTrained);
 
     //accessor functions
