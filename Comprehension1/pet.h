@@ -16,13 +16,13 @@ public:
     void updateName (string new_name);
     void updateAge ();
     void updateOwner (string new_owner);
-    void updateIsHouseTrained (bool isHouseTrained);
+    void updateisHouseTrained ();
 
     //accessor functions
     string getName() const;
     int getAge() const;
     string getOwner() const;
-    bool getIsHouseTrained() const;
+    bool getisHouseTrained() const;
 
 private:
     string name;

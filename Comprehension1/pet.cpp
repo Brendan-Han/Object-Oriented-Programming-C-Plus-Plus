@@ -2,19 +2,18 @@
 #include "pet.h"
 using namespace std;
 
+    pet::pet() { 
+    name = "N/A";
+    age = 0;
+    owner = "N/A";
+    isHouseTrained = false;
+    } 
     pet::pet(string name, int age, string owner, bool isHouseTrained){
         this->name = name;
         this->age = age;
         this->owner = owner;
         this->isHouseTrained = isHouseTrained;
-    }
-
-    pet::pet() { 
-        name = "";
-        age = -1;
-        owner = "";
-        isHouseTrained = false;
-    }  
+    } 
 
     string pet::getName() const {
         return name;
@@ -25,7 +24,7 @@ using namespace std;
     string pet::getOwner() const {
         return owner;
     }
-    bool pet::getIsHouseTrained() const {
+    bool pet::getisHouseTrained() const {
         return isHouseTrained;
     }
 
@@ -33,11 +32,11 @@ using namespace std;
         name = new_name;
     }
     void pet::updateAge () {
-        age = age++;
+        age++;
     }
     void pet::updateOwner (string new_owner) {
         owner = new_owner;
     }
-    void pet::updateIsHouseTrained (bool isHouseTrained) {
+    void pet::updateisHouseTrained () {
         isHouseTrained = true;
     } 
