@@ -1,10 +1,12 @@
 #include <iostream>
-#include <iomanip>
 #include<string>
 #include "pet.h"
 using namespace std;
 
 class pet {
+    
+    public:
+
     pet ();
     pet (string name, int age, string owner, bool isHouseTrained);
 
