@@ -14,7 +14,7 @@ class pet {
         owner = "";
         isHouseTrained = false;
     }   
-    //accessor functions
+    
     void getName(string name);
     void getAge(int age);
     void getOwner(string owner);
@@ -25,7 +25,7 @@ class pet {
         this->name = name;
     }
     void pet::updateAge (int age) {
-        this->age
+        this->age;
     }
     void pet::updateOwner (string owner) {
         this->owner = owner;
@@ -39,4 +39,4 @@ private:
     int age;
     string owner;
     bool isHouseTrained;    
-}
+};
