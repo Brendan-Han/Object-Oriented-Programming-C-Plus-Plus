@@ -8,6 +8,7 @@ using namespace std;
 const int SKILL_SIZE = 2;
 
 class RPG {
+
 public:
 
 // constructors
@@ -22,11 +23,11 @@ void attack(RPG *) const;
 void useSkill(RPG *) const;
 
 //accessor
-const bool isAlive();
-const string getName();
-const int getHealth();
-const int getStrength();
-const int getDefense();
+bool isAlive() const;
+string getName() const;
+int getHealth() const;
+int getStrength() const;
+int getDefense() const;
 
 private:
 
@@ -38,4 +39,5 @@ string typ;
 string skills[SKILL_SIZE];
 
 };
+
 #endif
