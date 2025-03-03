@@ -12,8 +12,8 @@ class RPG {
 public:
 
 // constructors
-RPG();
-RPG(string name, int health, int strength, int defense, string type);
+RPG ();
+RPG (string name, int health, int strength, int defense, string type);
 
 //mutators
 void setSkills();
