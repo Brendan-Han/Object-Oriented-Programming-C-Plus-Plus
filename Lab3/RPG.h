@@ -16,11 +16,11 @@ RPG();
 RPG(string name, int health, int strength, int defense, string type);
 
 //mutators
-void setSkills() const;
-void printAction(string, RPG) const;
-void updateHealth(int) const;
-void attack(RPG *) const;
-void useSkill(RPG *) const;
+void setSkills();
+void printAction(string, RPG);
+void updateHealth(int);
+void attack(RPG *);
+void useSkill(RPG *);
 
 //accessor
 bool isAlive() const;
