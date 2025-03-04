@@ -15,12 +15,12 @@ int main(){
 
     RPG1.updateHealth(1000);
     
-    cout << "New Health: " << RPG1.getHealth() << "Alive? " << RPG1.isAlive();
+    cout << "New Health: " << RPG1.getHealth() << endl << "Alive? " << (RPG1.isAlive()? "Yes":"No") << endl;
 
     cout << "Name: " << RPG2.getName() << endl << "Health: " << RPG2.getHealth() << endl << "Str: " << RPG2.getStrength() << endl << "Def: " << RPG2.getDefense() << endl;
 
     RPG2.updateHealth(1000);
     
-    cout << "New Health: " << RPG2.getHealth() << "Alive? " << RPG2.isAlive();
+    cout << "New Health: " << RPG2.getHealth() << endl << "Alive? " << (RPG2.isAlive()? "Yes":"No");
 
 }
