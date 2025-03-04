@@ -23,4 +23,6 @@ RPG::RPG(string name, int health, int strength, int defense, string type){
     this->defense = defense;
     this->type = type;
 
+    void setSkills();
 }
+
