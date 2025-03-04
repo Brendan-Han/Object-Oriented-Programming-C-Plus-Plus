@@ -15,14 +15,14 @@ public:
 RPG ();
 RPG (string name, int health, int strength, int defense, string type);
 
-//mutators
+
 void setSkills();
-void printAction(string, RPG);
-void updateHealth(int);
+void printAction(string name, RPG);
+void updateHealth(int health);
 void attack(RPG *);
 void useSkill(RPG *);
 
-//accessor
+
 bool isAlive() const;
 string getName() const;
 int getHealth() const;
