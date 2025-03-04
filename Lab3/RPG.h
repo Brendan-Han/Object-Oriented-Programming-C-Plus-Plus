@@ -17,7 +17,7 @@ RPG (string name, int health, int strength, int defense, string type);
 
 
 void setSkills();
-void printAction(string name, RPG);
+void printAction(string skill, RPG);
 void updateHealth(int health);
 void attack(RPG *);
 void useSkill(RPG *);
