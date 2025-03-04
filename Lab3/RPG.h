@@ -35,7 +35,7 @@ string name;
 int health;
 int strength;
 int defense;
-string typ;
+string type;
 string skills[SKILL_SIZE];
 
 };
