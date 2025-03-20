@@ -23,7 +23,7 @@ RPG::RPG(string name, int health, int strength, int defense, string type){
     this->defense = defense;
     this->type = type;
 
-    void setSkills();
+    setSkills();
 }
 
 string RPG::getName() const{
@@ -55,8 +55,8 @@ void RPG::setSkills(){
     }
 }
 
-void RPG::printAction(string skill, RPG opponent){
-    printf("%s used %s on %s\n", name.c_str(), skill.c_str(), opponent.getName().c_str());
+void RPG::printAction(string skills, RPG opponent){
+    printf("%s used %s on %s\n", name.c_str(), skills.c_str(), opponent.getName().c_str());
 }
 
 void RPG::updateHealth(int new_health){
@@ -74,12 +74,17 @@ bool RPG::isAlive() const{
 
 void RPG::attack(RPG * opponent){
 
-    int new_health = opponent->getHealth() - (strength - opponent->getDefense());
+    if((*opponent).getDefense() > strength){
+        int new_health = (*opponent).getHealth();
+        (* opponent).updateHealth(new_health);
+    }
+    else{int new_health = (*opponent).getHealth() - (strength - (*opponent).getDefense());
 
     (* opponent).updateHealth(new_health);
+    }
 }
 void RPG::useSkill(RPG * opponent){
-    for(int i = 0; i <= SKILL_SIZE; i++){
+    for(int i = 0; i < SKILL_SIZE; i++){
         printf("Skill %i: %s\n", i, skills[i].c_str());
     }
 

@@ -19,7 +19,7 @@ void displayEnd(RPG player1, RPG player2){
 
 }
 void gameLoop(RPG *player1, RPG *player2){
-    while((*player1).isAlive() && (*player2).isAlive()){
+    while((*player1).isAlive() == true && (*player2).isAlive() == true){
         displayStats(*player1,*player2);
         cout << (*player1).getName() << "'s turn:" << endl;
         (*player1).useSkill(player2);
