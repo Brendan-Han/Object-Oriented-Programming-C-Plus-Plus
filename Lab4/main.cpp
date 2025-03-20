@@ -4,23 +4,38 @@
 #include "RPG.h"
 using namespace std;
 
-//unused functions: attack, useSkill
+void displayStats(RPG player1, RPG player2){
+    cout << player1.getName() << " health: " << player1.getHealth() << " " << player2.getName() << " health: " << player2.getHealth() << endl;
+}
 
+void displayEnd(RPG player1, RPG player2){
+
+    if(player1.isAlive() == true){
+        cout << player1.getName() << " defeated " << player2.getName() << "! Good game!" << endl;
+    }
+    else{
+        cout << player2.getName() << " defeated " << player1.getName() << "! Good game!" << endl;
+    }
+
+}
+void gameLoop(RPG *player1, RPG *player2){
+    while((*player1).isAlive() && (*player2).isAlive()){
+        displayStats(*player1,*player2);
+        cout << (*player1).getName() << "'s turn:" << endl;
+        (*player1).useSkill(player2);
+        cout << "-------------------------------" << endl;
+
+        displayStats(*player1,*player2);
+        cout << (*player2).getName() << "'s turn:" << endl;
+        (*player2).useSkill(player1);
+        cout << "-------------------------------" << endl;
+    }
+}
 int main(){
-    RPG RPG1;
-    RPG RPG2("John", 100, 10, 10, "mage");
+    RPG player1 = RPG("Wiz", 70, 45, 15, "mage");
+    RPG player2 = RPG();
 
-
-    cout << "Name: " << RPG1.getName() << endl << "Health: " << RPG1.getHealth() << endl << "Str: " << RPG1.getStrength() << endl << "Def: " << RPG1.getDefense() << endl;
-
-    RPG1.updateHealth(1000);
-    
-    cout << "New Health: " << RPG1.getHealth() << endl << "Alive? " << (RPG1.isAlive()? "Yes":"No") << endl;
-
-    cout << "Name: " << RPG2.getName() << endl << "Health: " << RPG2.getHealth() << endl << "Str: " << RPG2.getStrength() << endl << "Def: " << RPG2.getDefense() << endl;
-
-    RPG2.updateHealth(1000);
-    
-    cout << "New Health: " << RPG2.getHealth() << endl << "Alive? " << (RPG2.isAlive()? "Yes":"No");
-
+    gameLoop(&player1, &player2);
+    displayEnd(player1, player2);
+    return 0;
 }
