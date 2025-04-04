@@ -12,7 +12,7 @@ class Charmander : public Pokemon{
         Charmander(string name, int hp, int att, int def, vector<string> type, vector<string> s);
 
         void speak();
-        void PrintStats();
+        void printStats();
     private:
         vector<string> skills;
 };
