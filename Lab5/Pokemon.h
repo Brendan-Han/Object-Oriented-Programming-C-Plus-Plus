@@ -20,4 +20,4 @@ class Pokemon{
         int defense;
         vector<string> type;
 };
-#endif;
+#endif
