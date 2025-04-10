@@ -9,7 +9,7 @@ using namespace std;
 class Charmander : public Pokemon{
     public:
         Charmander();
-        Charmander(string name, int hp, int att, int def, vector<string> type, vector<string> s);
+        Charmander(string name, int hp, int att, int def, vector<string> t, vector<string> s);
 
         void speak();
         void printStats();
